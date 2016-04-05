@@ -21,7 +21,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "hexo clean & hexo s -debug"
+    "start": "hexo clean & hexo s -debug",
+    "deploy": "hexo clean & hexo deploy"
   },
   "repository": {
     "type": "git",
