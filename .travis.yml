@@ -1,0 +1,35 @@
+language: node_js
+
+sudo: false
+
+node_js:
+- 5.10.0
+
+branches:
+  only:
+  - master
+  
+cache:
+  directories:
+  - node_modules
+
+before_install:
+- npm install -g hexo-cli
+- npm install -g hexo
+- npm install
+
+before_script:
+- git config --global user.name "xubuild"
+- git config --global user.email "xubuild@gmail.com"
+- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+
+install:
+- hexo clean
+- hexo generate
+
+script:
+- hexo deploy
+
+env:
+  global:
+    secure: D1z/GxG2qaFiyEeh3OEgiKbFYTDlXv9TJP829epkeX4vEggnTSguoe/725rPiwE/1ihPi7rcM5xVEKjwehUFm7TG/jPQHSCQcwtnMBVkyIVyhvkBXhRNwHrXmwEKWRWbXGaaIfWFLHgKdshAdNlzFNYsTbcArDlpqpPivOHrb/HyqaNB+ZCcMR9wmbYRi4m0ibtlkS5T5njY0pe8eal6+g0wfIrdkXjUrdnG6BP3XOBos/ha87hUnoP5MR2qC1NhvZYmG3+6HafwKJVGY+iTTnjjYy/9aRL0zIfBMSeF/Cz3YJ/KLmuX6zD9aaxwWNoyJZg6HH4HqO8ej4MZFjK64us/3kgL2nLxRb7KiNljn92wDKRjuhUGK1txWKsbQQA/fp1NrUhJM3SgyKi+PN5DAr1Xc2x3ygDyCIFBmUw4kUasCx8+CXeHh64eBBVOB5xs4VtMlWLsCWxYh6/210RHY0k3vzohAolO+EIHSKqA5sx49YyZl0QCb8yJpc8vawcx8b0fducTab8ogkB/mNeXZsIp6pgJ4AkfkwBTj9xaYrNbTG1/W90sTdymntCMliQp2wyID/5DCKAtp7oQHl3OHp8BDq+5rUJo/ESfEvuJQuX5IPs1iHnLmGkBw+RcFLgC9Dx+/d7do1QFoLF/9UlyCreRdw6fE56H+12PgFvStHE=
