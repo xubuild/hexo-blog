@@ -124,7 +124,7 @@ $(document).ready(function () {
       }) :
       $('html, body').stop().animate({
         scrollTop: offset
-      }, 500);
+      }, 300);
   });
 
   // Expand sidebar on post detail page by default, when post has a toc.

@@ -1,1 +1,89 @@
 // Custom styles.
+
+h1.post-title, .posts-expand a.post-title-link{
+	color:#e74c3c;
+}
+.posts-expand .post-meta{
+	margin-bottom:5px;
+}
+
+.posts-expand .post-eof{
+	margin:20px auto 30px
+}
+
+.posts-expand{
+	padding-top:5px;
+}
+
+header>.header-inner{
+	padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.site-fancy-title  .text {
+  fill: none;
+  stroke-width: 8;
+  stroke-linejoin: round;
+  stroke-dasharray: 17.5 82.5;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 45s infinite linear;
+  animation: stroke 45s infinite linear;
+}
+
+.site-fancy-title  .text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -9s;
+  animation-delay: -9s;
+}
+.site-fancy-title  .text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -18s;
+  animation-delay: -18s;
+}
+
+.site-fancy-title  .text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -27s;
+  animation-delay: -27s;
+}
+
+.site-fancy-title  .text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -36s;
+  animation-delay: -36s;
+}
+
+.site-fancy-title  .text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -45s;
+  animation-delay: -45s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+.site-fancy-title  {
+	height:60px;
+	width:200px;
+  background: #212121;
+  background-size: .2em 100%;
+  font: 14.5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.site-fancy-title svg {
+  left:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
